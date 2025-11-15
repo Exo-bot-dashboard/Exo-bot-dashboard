@@ -1,0 +1,55 @@
+modules = ["nodejs-20", "postgresql-16"]
+
+[nix]
+channel = "stable-25_05"
+
+[agent]
+integrations = ["javascript_database:1.0.0", "javascript_openai_ai_integrations:1.0.0"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 33263
+externalPort = 3001
+
+[[ports]]
+localPort = 36817
+externalPort = 5173
+
+[[ports]]
+localPort = 37013
+externalPort = 3000
+
+[[ports]]
+localPort = 37647
+externalPort = 5000
+
+[[ports]]
+localPort = 40461
+externalPort = 4200
+
+[[ports]]
+localPort = 40903
+externalPort = 3002
+
+[[ports]]
+localPort = 45349
+externalPort = 3003
+
+[deployment]
+run = ["sh", "-c", "tsx server/index.ts"]
+deploymentTarget = "cloudrun"
+build = ["sh", "-c", "npm run build"]
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Start Application "
+mode = "sequential"
+author = 49472126
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
