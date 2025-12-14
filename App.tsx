@@ -1,11 +1,11 @@
 import { Route, Switch, Link, useLocation, useRoute } from "wouter";
 import { useQuery, useMutation } from "@tanstack/react-query";
-import { apiRequest, queryClient } from "./lib/queryClient";
+import { apiRequest, queryClient } from "./queryClient";
 import { useState, useEffect, createContext, useContext } from "react";
 import { Settings, DollarSign, Package, Gift, Hammer, Mail, Shield, Lock, FileText, Bot, Users, Home, Menu, X, Moon, Sun, HelpCircle, Box, Smile, Star, MessageSquare, BarChart, ArrowLeftRight, Workflow, FileCheck } from "lucide-react";
-import WorkflowBuilderPage from "./pages/WorkflowBuilder";
-import WorkflowListPage from "./pages/WorkflowList";
-import AppealsPage from "./pages/Appeals";
+import WorkflowBuilderPage from "./WorkflowBuilder";
+import WorkflowListPage from "./WorkflowList";
+import AppealsPage from "./Appeals";
 
 // Theme Context
 const ThemeContext = createContext<{

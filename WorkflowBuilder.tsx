@@ -30,8 +30,8 @@ import {
   Menu,
   Sparkles,
 } from 'lucide-react';
-import { useWorkflowGraph, WorkflowGraphNode } from '@/hooks/useWorkflowGraph';
-import { apiRequest, queryClient } from '@/lib/queryClient';
+import { useWorkflowGraph, WorkflowGraphNode } from '@/useWorkflowGraph';
+import { apiRequest, queryClient } from '@/queryClient';
 import type {
   Workflow,
   WorkflowNode,

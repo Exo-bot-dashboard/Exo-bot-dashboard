@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import { Link } from 'wouter';
 import { Plus, Zap, Clock, ToggleLeft, ToggleRight, Trash2, Edit, Sparkles } from 'lucide-react';
-import { apiRequest, queryClient } from '@/lib/queryClient';
+import { apiRequest, queryClient } from '@/queryClient';
 import type { Workflow } from '@shared/schema';
 
 export default function WorkflowListPage() {
